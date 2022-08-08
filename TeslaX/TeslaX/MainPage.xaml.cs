@@ -65,10 +65,8 @@ namespace TeslaX
                 "Authorization", 
                 $"Bearer {accessToken.AccessToken}");
 
-            List<Vehicle> Vehicles = await OTeslaAPI.GetAllVehiclesAsync(_client);
             //return await _teslaAPI.GetAllVehiclesAsync(_client);
-
-            return Vehicles;
+            return await OTeslaAPI.GetAllVehiclesAsync(_client); 
 
         }
 
