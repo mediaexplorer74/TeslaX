@@ -20,7 +20,7 @@ I'm sharing the source in case anyone wants to improve it or is curious about th
 
 ## Referencies
 
-![PowerwallCompanionX](https://github.com/tomhollander/PowerwallCompanionX)
+- [PowerwallCompanionX](https://github.com/tomhollander/PowerwallCompanionX)
 
 ## .
 AS IS. No support. RnD only.
