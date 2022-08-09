@@ -1,6 +1,6 @@
 # TeslaX 
 
-TeslaX is my fork of Powerwall Companion X project.
+TeslaX is my fork of [PowerwallCompanionX](https://github.com/tomhollander/PowerwallCompanionX) project.
 
 ## Two words about Powerwall Companion X
 
@@ -23,7 +23,7 @@ I'm sharing the source in case anyone wants to improve it or is curious about th
 
 ## Referencies
 
-- [https://github.com/tomhollander/](https://github.com/tomhollander) Tom Hollander, great C# .NET Developer
+- [https://github.com/tomhollander](https://github.com/tomhollander) Tom Hollander, great C# .NET Developer
 - [https://github.com/tomhollander/PowerwallCompanionX](https://github.com/tomhollander/PowerwallCompanionX) PowerwallCompanionX, original, for "Droidphones"
 - [https://github.com/tomhollander/TeslaAuth](https://github.com/tomhollander/TeslaAuth) TeslaAuth .NET Standard 2 library for Tesla API auth
 
