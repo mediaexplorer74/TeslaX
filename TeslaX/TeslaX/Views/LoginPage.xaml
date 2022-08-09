@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeslaX.Views.LoginPage"
+             xmlns:converters="clr-namespace:TeslaX.Converters"
+             Background="Black">
+
+    <Page.Resources>
+        <converters:NegateValueConverter x:Key="NegateValueConverter" />
+    </Page.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="FillAndExpand">
+            <Image Source="PowerwallLogo.png" HorizontalOptions="Center" HeightRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="TapGestureRecognizer_Tapped"
+                        NumberOfTapsRequired="2" /> 
+                </Image.GestureRecognizers>
+            </Image>
+            <WebView x:Name="webView" Source="{Binding LoginUrl}" Navigating="webView_Navigating" 
+                    Margin="0,0,0,200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
