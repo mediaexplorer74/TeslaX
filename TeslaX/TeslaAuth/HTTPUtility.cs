@@ -180,7 +180,6 @@ namespace NETSystem.Net.Http
 
         internal string Get(string v)
         {
-            // TODO
             return v;
         }
 

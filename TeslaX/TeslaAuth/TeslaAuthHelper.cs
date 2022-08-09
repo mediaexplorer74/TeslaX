@@ -87,9 +87,9 @@ namespace TeslaAuth
             string code_challenge_SHA256 = ComputeSHA256Hash(loginInfo.CodeVerifier);
             loginInfo.CodeChallenge = Convert.ToBase64String(Encoding.Unicode.GetBytes(code_challenge_SHA256));//(Encoding.Default.GetBytes(code_challenge_SHA256));
 
-            UriBuilder b = new UriBuilder(client.BaseAddress + "/oauth2/v3/authorize") { Port = -1 };
+            UriBuilder b = new UriBuilder(client.BaseAddress + "/oauth2/v3/authorize/?client_id=&code_challenge=&code_challenge_method=&redirect_uri=&response_type=&scope=&state=") { Port = -1 };
 
-            var q = HttpUtility.ParseQueryString(b.Query);
+            var q = HttpUtility.ParseQueryString(b.Query);//(b.Query);
             q["client_id"] = "ownerapi";
             q["code_challenge"] = loginInfo.CodeChallenge;
             q["code_challenge_method"] = "S256";

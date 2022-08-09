@@ -2,7 +2,13 @@
 
 TeslaX is my fork of [PowerwallCompanionX](https://github.com/tomhollander/PowerwallCompanionX) project.
 
-## Two words about Powerwall Companion X
+## Screenshots
+![screenshot1](Images/shot1.png)
+
+## Tech details
+Min. Windows OS build: 16299 (14393 in near future)) 
+
+## Two words about original Powerwall Companion X
 
 Powerwall Companion X is a XamarinForms-based Android app for monitoring your Tesla Powerwall 2 battery. 
 
