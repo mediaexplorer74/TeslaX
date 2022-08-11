@@ -9,13 +9,16 @@ namespace TeslaX.UWP
 {
     public class IClearCookiesImplementation : IClearCookies
     {
+        /*
         public void Clear()
         {
-            CookieManager cookieManager = CookieManager.Instance;
-            
             //TODO
+
+            //CookieManager cookieManager = CookieManager.Instance;
+
             //cookieManager.RemoveAllCookie();
         }
+        */
     }
 
     public class CookieManager

@@ -6,6 +6,6 @@ namespace TeslaX
 {
     public interface IClearCookies
     {
-        void Clear();
+        //void Clear();
     }
 }

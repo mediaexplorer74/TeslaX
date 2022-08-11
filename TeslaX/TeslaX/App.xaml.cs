@@ -44,10 +44,8 @@ using TeslaX.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-//using TeslaRemote.Services;
-using TeslaRemote.Views;
 
-namespace TeslaRemote
+namespace TeslaX
 {
     public partial class App : Application
     {
@@ -58,7 +56,7 @@ namespace TeslaRemote
 
             //DependencyService.Register<MockDataStore>();
 
-            /*
+            
              if (false)//(!string.IsNullOrEmpty(Settings.SiteId))
             {
                 MainPage = new MainPage();
@@ -67,9 +65,8 @@ namespace TeslaRemote
             {
                 MainPage = new LoginPage();
             }
-             */
-            MainPage = new MainPage();
-        }
+
+        }//App
 
         protected override void OnStart()
         {

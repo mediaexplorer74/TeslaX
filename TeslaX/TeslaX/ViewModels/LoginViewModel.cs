@@ -19,7 +19,7 @@ namespace TeslaX.ViewModels
         public LoginViewModel()
         {
             // Clear all cookies
-            DependencyService.Get<IClearCookies>().Clear();
+            //DependencyService.Get<IClearCookies>().Clear();
         }
 
         public string LoginUrl

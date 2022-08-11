@@ -41,9 +41,14 @@
             </Ellipse.GestureRecognizers>
         </Ellipse-->
         
-        <Label x:Name="unitsLabel" HorizontalTextAlignment="End" TextColor="White" Margin="0,5,50,0" FontSize="Medium" Text="kW"/>
+        <Label x:Name="unitsLabel" 
+               HorizontalTextAlignment="End" 
+               TextColor="White" 
+               Margin="0,5,50,0" 
+               FontSize="Medium" 
+               Text="kW"/>
 
-        <cards:CarouselView ItemAppeared="CarouselView_ItemAppeared">
+        <!--cards:CarouselView ItemAppeared="CarouselView_ItemAppeared"-->
             <ListView
             x:Name="carousel" 
             Grid.Row="1" 
