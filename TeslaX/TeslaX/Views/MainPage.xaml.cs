@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using TeslaX.Media;
 using TeslaX.ViewModels;
-using Syncfusion.SfChart.XForms;
+//using Syncfusion.SfChart.XForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,8 +41,8 @@ namespace TeslaX.Views
         {
 
             string visualState = Width > Height ? "Landscape" : "Portrait";
-            var page1Grid = (Grid)((Array)carousel.ItemsSource).GetValue(0);
-            var page2Grid = (Grid)((Array)carousel.ItemsSource).GetValue(1);
+            Grid page1Grid = (Grid)((Array)carousel.ItemsSource).GetValue(0);
+            Grid page2Grid = (Grid)((Array)carousel.ItemsSource).GetValue(1);
 
             if (visualState == "Portrait")
             {
@@ -141,9 +141,13 @@ namespace TeslaX.Views
             Device.StartTimer(TimeSpan.FromSeconds(10), () =>
             {
                 RefreshDataFromTeslaOwnerApi();
+
                 if (Settings.CyclePages && DateTime.Now - lastManualSwipe > swipeIdlePeriod)
-                { 
-                    carousel.SelectedIndex = (carousel.SelectedIndex + 1) % 2;
+                {
+                    //TODO: use carousel.SelectedItem
+
+                    //carousel.SelectedIndex = (carousel.SelectedIndex + 1) % 2;
+
                 }
                 return keepRefreshing; // True = Repeat again, False = Stop the timer
             });
@@ -303,10 +307,10 @@ namespace TeslaX.Views
                 }
 
                 var json = await ApiHelper.CallGetApiWithTokenRefresh($"{ApiHelper.BaseUrl}/api/1/energy_sites/{Settings.SiteId}/history?kind=power", "PowerHistory");
-                viewModel.HomeGraphData = new List<ChartDataPoint>();
-                viewModel.SolarGraphData = new List<ChartDataPoint>();
-                viewModel.BatteryGraphData = new List<ChartDataPoint>();
-                viewModel.GridGraphData = new List<ChartDataPoint>();
+                viewModel.HomeGraphData = new List<Point>();
+                viewModel.SolarGraphData = new List<Point>();
+                viewModel.BatteryGraphData = new List<Point>();
+                viewModel.GridGraphData = new List<Point>();
 
                 foreach (var datapoint in (JArray)json["response"]["time_series"])
                 {
@@ -315,10 +319,12 @@ namespace TeslaX.Views
                     var batteryPower = datapoint["battery_power"].Value<double>();
                     var gridPower = datapoint["grid_power"].Value<double>();
                     var homePower = solarPower + batteryPower + gridPower;
-                    viewModel.HomeGraphData.Add(new ChartDataPoint(timestamp, homePower));
-                    viewModel.SolarGraphData.Add(new ChartDataPoint(timestamp, solarPower));
-                    viewModel.GridGraphData.Add(new ChartDataPoint(timestamp, gridPower));
-                    viewModel.BatteryGraphData.Add(new ChartDataPoint(timestamp, batteryPower));
+
+                    // TEMP: timestamp <-> 0
+                    viewModel.HomeGraphData.Add(new Point(0, homePower));
+                    viewModel.SolarGraphData.Add(new Point(0, solarPower));
+                    viewModel.GridGraphData.Add(new Point(0, gridPower));
+                    viewModel.BatteryGraphData.Add(new Point(0, batteryPower));
                 }
 
                 viewModel.PowerHistoryLastRefreshed = DateTime.Now;
@@ -347,6 +353,7 @@ namespace TeslaX.Views
             }
         }
 
+        /*
         private void CarouselView_ItemAppeared(PanCardView.CardsView view, PanCardView.EventArgs.ItemAppearedEventArgs args)
         {
             if (args.Index == 0)
@@ -365,6 +372,7 @@ namespace TeslaX.Views
             }
             
         }
+        */
 
         private async void statusEllipse_Tapped(object sender, EventArgs e)
         {

@@ -11,17 +11,18 @@ namespace TeslaX.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var status = (ViewModels.MainViewModel.StatusEnum)value;
+            
             switch (status)
             {
                 case ViewModels.MainViewModel.StatusEnum.IdleGrid:
-                    return new SolidColorBrush(Color.Lime);
+                    return Color.Lime;
                 case ViewModels.MainViewModel.StatusEnum.ExportingToGrid:
-                    return new SolidColorBrush(Color.Magenta);
+                    return Color.Magenta;
                 case ViewModels.MainViewModel.StatusEnum.ImportingFromGrid:
-                    return new SolidColorBrush(Color.DodgerBlue);
+                    return Color.DodgerBlue;
                 case ViewModels.MainViewModel.StatusEnum.Error:
                 default:
-                    return new SolidColorBrush(Color.Red);
+                    return Color.Red;
             }
         }
 

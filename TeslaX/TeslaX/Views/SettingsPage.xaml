@@ -6,13 +6,15 @@
    
         <StackLayout Margin="10" Grid.Row="0" Grid.Column="0">
             <StackLayout Orientation="Horizontal">
-                <ImageButton Source="Back.png"
+
+            <!-- Back Button -->
+                <Button
                     HeightRequest="30" WidthRequest="30"
                     BackgroundColor="#202020"
                     HorizontalOptions="Start"
                     VerticalOptions="Center"
                     Command="{Binding BackCommand}"/>
-                <Label Text="Settings" FontSize="Title" TextColor="White" />
+                <Label Text="Settings" FontSize="Medium" TextColor="White" />
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Energy Site:" VerticalOptions="Center" TextColor="White" />

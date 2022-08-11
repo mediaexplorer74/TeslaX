@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F91B1562-A8BA-460F-BB74-49A88415BC48}</ProjectGuid>
+    <ProjectGuid>{329FD36C-2F66-4867-85E6-DD07103336A0}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
     <OutputType>Exe</OutputType>
@@ -130,22 +130,59 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\TeslaX\TeslaX.csproj">
-      <Project>{7709CD9D-3855-4610-9645-29D9565C7D92}</Project>
+      <Project>{8A3D58D0-792E-4740-B427-52B6B32DC09D}</Project>
       <Name>TeslaX</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Back.png" />
-    <Content Include="Resources\Icon.png" />
-    <Content Include="Resources\icon_battery.png" />
-    <Content Include="Resources\icon_battery_export.png" />
-    <Content Include="Resources\icon_battery_import.png" />
-    <Content Include="Resources\icon_grid.png" />
-    <Content Include="Resources\icon_grid_export.png" />
-    <Content Include="Resources\icon_grid_import.png" />
-    <Content Include="Resources\icon_home.png" />
-    <Content Include="Resources\icon_solar.png" />
-    <Content Include="Resources\PowerwallLogo.png" />
-    <Content Include="Resources\Settings.png" />
+    <BundleResource Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-Portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_battery_export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_battery_import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_grid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_grid_export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_grid_import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_solar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PowerwallLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Settings.png" />
   </ItemGroup>
 </Project>

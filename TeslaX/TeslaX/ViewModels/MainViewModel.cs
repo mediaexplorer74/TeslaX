@@ -1,5 +1,5 @@
 ﻿using TeslaX.Views;
-using Syncfusion.SfChart.XForms;
+//using Syncfusion.SfChart.XForms;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -229,19 +229,20 @@ namespace TeslaX.ViewModels
             get { return SolarValue - SolarToGrid - SolarToBattery; }
         }
 
-        public List<ChartDataPoint> HomeGraphData
+        // List<ChartDataPoint>
+        public List<Point> HomeGraphData
         {
             get; set;
         }
-        public List<ChartDataPoint> SolarGraphData
+        public List<Point> SolarGraphData
         {
             get; set;
         }
-        public List<ChartDataPoint> GridGraphData
+        public List<Point> GridGraphData
         {
             get; set;
         }
-        public List<ChartDataPoint> BatteryGraphData
+        public List<Point> BatteryGraphData
         {
             get; set;
         }

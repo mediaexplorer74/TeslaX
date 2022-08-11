@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.1.527436" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\leftArrow.png" />
+    <None Remove="Resources\rightArrow.png" />
+    <None Remove="Resources\leftArrowBlack.png" />
+    <None Remove="Resources\rightArrowBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\leftArrowBlack.png" />
+    <EmbeddedResource Include="Resources\rightArrowBlack.png" />
+    <EmbeddedResource Include="Resources\leftArrow.png" />
+    <EmbeddedResource Include="Resources\rightArrow.png" />
+  </ItemGroup>
+</Project>
