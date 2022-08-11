@@ -1,6 +1,6 @@
 # TeslaX 
 
-TeslaX is my fork of [PowerwallCompanionX](https://github.com/tomhollander/PowerwallCompanionX) project.
+TeslaX is my fork of [PowerwallCompanionX](https://github.com/tomhollander/PowerwallCompanionX) project. UWP and W10M support added.
 
 ## About Powerwall Companion X
 
@@ -9,9 +9,10 @@ Original "Powerwall Companion X" is a Xamarin Forms - based Android app for moni
 It has similar functionality to the official Tesla app, but it's designed to be 
 more of an "always on" dashboard, running on a spare device. 
 
-
 Very cool app, IMHO :)
 
+## Screenshots
+![Screenshot1](Images/shot1.png)
 ## My 2 cents
 
 - Windows UWP version added;
@@ -25,9 +26,7 @@ Very cool app, IMHO :)
 
 Current supported min. Windows OS build: 16299 
 
-14393 planned in near future, So, TeslaAPI and PanCardView libs temporary disabled! 
-
-Goal: additional app debugging and bug-fixing after solution "downshifting" 
+14393/15063 planned in near future. So, TeslaAPI and PanCardView libs temporary disabled at now because of my goal is additional app debugging and bug-fixing after solution "downshifting" 
 (decreasing min. os. builds, in 2 words).
 
 ## DIY
